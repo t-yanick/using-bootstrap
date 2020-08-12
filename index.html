@@ -1,0 +1,713 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+        integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css"
+        integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
+    <title>NewsNow Clone</title>
+</head>
+
+<body>
+    <div class="main mx-auto">
+        <header>
+            <div class="navbar d-flex red justify-content-between px-lg-4 pb-lg-4 pt-lg-3 p-2">
+                <div class="true-center d-none d-lg-block">
+                    <div class="navbar-text d-block text-white weather-date pb-0">
+                        <img src="https://g.newsweek.com/img/weather/26.png" alt="Cloudy" class="weather-icon">
+                        21° <span>Yaounde, CM</span>
+                        <img src="https://g.newsweek.com/img/weather/ic-white-arrow.png" class="weather-arrow">
+                    </div>
+                    <div class="navbar-text text-white weather-date">
+                        Wed, Aug 12, 2020
+                    </div>
+                </div>
+
+                <a class="navbar-brand px-2" href="#">
+                    <svg class="svg" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg"
+                        xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 395.6 60"
+                        style="enable-background:new 0 0 395.6 60;" xml:space="preserve">
+                        <g>
+                            <path class="st0"
+                                d="M58.7,10.8h-5.6v48.3H42.8l-25.1-33v22.1h5.6v10.8H0V48.3h5.6V10.8H0V0h17.6L41,30.7V10.8h-5.6V0h23.2	L58.7,10.8L58.7,10.8z M95.8,38c0,0.9,0,1.8-0.1,2.7H70.3c-0.7,8.2,2.4,10.6,7.1,10.6c3.9,0,6.9-2.6,6.9-6.6h11	c-0.3,7.2-4,15.4-18.5,15.4c-14.5,0-21.3-10.5-21.3-22.1c0-10.5,7-21.6,21-21.6C89.9,16.3,95.8,25.6,95.8,38 M159,27.3h-3.7	l-9.4,31.8h-12.5l-5.9-17.4l-5.3,17.4h-12.8L98.8,27.4h-3.7V16.6h22.1v10.7h-5.6l5.8,16.9l7.6-27.6h6.8l9.3,27.6l5-16.9h-5.6V16.6	H159L159,27.3L159,27.3z M174.5,27.8c0,1.5,1.2,2.5,5.4,3.9l6,2c5.5,1.8,12.1,5.9,12.1,13.4c0,8.8-6.6,13-14.7,13	c-6.5,0-11.5-3.2-12.9-4.6V59h-10.8V44.4h10.6c0.3,4.8,4.6,7.3,8.5,7.3c3.2,0,4.7-1.4,4.7-3c0-2-1.2-3.1-6.5-4.8l-5.3-1.8	c-5.4-1.7-11.4-5.7-11.4-12.8c0-8.7,7.7-13.1,14.3-13.1c6.8,0,10.1,1.9,11.8,3.8l0.1-3.3H197v13.3h-11.2c-0.2-3.6-3.7-5.2-7.2-5.2	C175.8,24.8,174.5,26.1,174.5,27.8 M262.8,27.3h-3.7l-9.4,31.8h-12.5l-5.9-17.4L226,59.1h-12.8l-10.6-31.7h-3.7V16.6h22.1v10.7	h-5.6l5.8,16.9l7.6-27.6h6.8l9.3,27.7l5-16.9h-5.6V16.6h18.5V27.3z M302,37.9c0,0.9,0,1.8-0.1,2.7h-25.4	c-0.7,8.2,2.4,10.6,7.1,10.6c3.9,0,6.9-2.6,6.9-6.6h11c-0.3,7.2-4,15.4-18.5,15.4c-14.5,0-21.3-10.5-21.3-22.1	c0-10.5,7-21.6,21-21.6C296.1,16.2,302,25.5,302,37.9 M343.9,37.8c0,0.9,0,1.8-0.1,2.7h-25.4c-0.7,8.2,2.4,10.6,7.1,10.6	c3.9,0,6.9-2.6,6.9-6.6h11c-0.3,7.2-4,15.4-18.5,15.4c-14.5,0-21.3-10.5-21.3-22.1c0-10.5,7-21.6,21-21.6	C338,16.1,343.9,25.4,343.9,37.8 M389.9,59h-12.8l-13.3-17.3l-4.3,3.2v3.4h3.8V59h-19.6V48.3h3.7V10.6h-5.6V0h17.8v33.9l8.9-6.5	h-5.6V16.6h23.9v10.8h-3.7l-9.3,7l10.7,13.9h5.6L389.9,59L389.9,59z M395.6,56.6c0,0.5-0.1,0.9-0.4,1.2c-0.2,0.4-0.5,0.7-0.9,0.9	c-0.4,0.2-0.8,0.4-1.3,0.4c-0.5,0-0.9-0.1-1.2-0.4c-0.4-0.2-0.7-0.5-0.9-0.9c-0.2-0.4-0.4-0.8-0.4-1.2c0-0.5,0.1-0.9,0.4-1.2	c0.2-0.4,0.5-0.7,0.9-0.9c0.4-0.2,0.8-0.4,1.2-0.4c0.5,0,0.9,0.1,1.3,0.4c0.4,0.2,0.7,0.5,0.9,0.9	C395.5,55.8,395.6,56.2,395.6,56.6 M394.6,58c0.4-0.4,0.6-0.9,0.6-1.4c0-0.6-0.2-1-0.6-1.4s-0.9-0.6-1.4-0.6s-1,0.2-1.4,0.6	c-0.4,0.4-0.6,0.9-0.6,1.4c0,0.6,0.2,1,0.6,1.4c0.4,0.4,0.9,0.6,1.4,0.6S394.2,58.4,394.6,58 M393.6,56.8c0.1,0.1,0.2,0.1,0.2,0.1	c0.1,0.1,0.2,0.2,0.2,0.3c0,0,0.2,0.3,0.4,0.8h-0.8c-0.3-0.5-0.4-0.8-0.5-0.9c-0.1-0.1-0.2-0.2-0.3-0.2c0,0-0.1,0-0.1,0v1.1h-0.6	v-2.6h1.2c0.4,0,0.6,0.1,0.7,0.2c0.2,0.2,0.2,0.3,0.2,0.6c0,0.2-0.1,0.4-0.2,0.5C393.9,56.6,393.8,56.7,393.6,56.8 M393.5,56.3	c0.1-0.1,0.1-0.2,0.1-0.3s-0.1-0.2-0.1-0.3c-0.1-0.1-0.2-0.1-0.4-0.1h-0.3v0.7h0.3C393.3,56.4,393.4,56.4,393.5,56.3 M318.4,33.5	h13.9c0-6-3.9-8.4-6.8-8.4C322.1,25.2,318.6,27.9,318.4,33.5 M276.5,33.6h13.9c0-6-3.9-8.4-6.8-8.4C280.3,25.2,276.8,28,276.5,33.6 M70.3,33.7h13.9c0-6-3.9-8.4-6.8-8.4C74.1,25.3,70.6,28.1,70.3,33.7">
+                            </path>
+                        </g>
+
+                    </svg>
+                </a>
+
+                <div class="d-flex align-items-end">
+                    <div class="d-md-none mx-2 my-0 py-0 mb-1">
+                        <i class="fa fa-user" aria-hidden="true"></i>
+                    </div>
+                    <button class="btn mx-2 font-weight-bold text-white py-1 d-none d-md-block">LOGIN</button>
+                    <div class="mx-2">
+                        <button type="button"
+                            class="btn btn-primary btn-subscribe py-1 text-dark font-weight-bold border-0 mb-1 mb-md-0">SUBSCRIBE
+                            <i class="fas fa-chevron-right"></i>
+                        </button>
+                    </div>
+                    <div class="d-lg-none mx-2 my-0 py-0 mb-md-0 mb-1">
+                        <i class="fa fa-bars" aria-hidden="true"></i>
+                    </div>
+                </div>
+            </div>
+            <div class="py-2 d-none d-lg-block nav-container">
+                <ul class="nav py-0 text-nowrap nav-fill py-2">
+                    <li class="nav-item text-dark font-weight-bold px-0">
+                        <a class="nav-link border-right p-0" href="#">U.S.</a>
+                    </li>
+                    <li class="nav-item text-dark font-weight-bold  px-0">
+                        <a class="nav-link border-right p-0" href="#">World</a>
+                    </li>
+                    <li class="nav-item text-dark font-weight-bold  px-0">
+                        <a class="nav-link border-right p-0" href="#">Business</a>
+                    </li>
+                    <li class="nav-item text-dark font-weight-bold  px-0">
+                        <a class="nav-link border-right p-0" href="#">Tech & Science</a>
+                    </li>
+                    <li class="nav-item text-dark font-weight-bold  px-0">
+                        <a class="nav-link border-right p-0" href="#">Culture</a>
+                    </li>
+                    <li class="nav-item text-dark font-weight-bold  px-0">
+                        <a class="nav-link border-right p-0" href="#">Newsgeek</a>
+                    </li>
+                    <li class="nav-item text-dark font-weight-bold  px-0">
+                        <a class="nav-link border-right p-0" href="#">Sports</a>
+                    </li>
+                    <li class="nav-item text-dark font-weight-bold  px-0">
+                        <a class="nav-link border-right p-0" href="#">Health</a>
+                    </li>
+                    <li class="nav-item text-dark font-weight-bold  px-0">
+                        <a class="nav-link border-right p-0" href="#">The Debate</a>
+                    </li>
+                    <li class="nav-item text-dark font-weight-bold  px-0">
+                        <a class="nav-link border-right p-0" href="#">Vantage</a>
+                    </li>
+                    <li class="nav-item text-dark font-weight-bold  px-0">
+                        <a class="nav-link p-0" href="#">Weather</a>
+                    </li>
+                    <li class="nav-item text-dark font-weight-bold  p-0">
+                        <button type="button" class="btn p-0"> Search <i class="fa fa-search"
+                                aria-hidden="true"></i></button>
+                    </li>
+                    <div class="upper-tri"></div>
+                </ul>
+            </div>
+            <div class="d-none d-lg-block border-top border-bottom">
+                <ul class="nav p-2 mx-2 text-muted">
+                    <li class="nav-item px-2 text-dark trending-item"><strong>TRENDING</strong></li>
+                    <li class="nav-item px-2 trending-item">DONALD TRUMP</li>
+                    <li class="nav-item px-2 trending-item">JOE BIDEN</li>
+                    <li class="nav-item px-2 trending-item">CHINA</li>
+                    <li class="nav-item px-2 trending-item">CORONAVIRUS</li>
+                    <li class="nav-item px-2 trending-item">2020 ELECTION</li>
+                </ul>
+            </div>
+        </header>
+
+        <!--Featured Stories-->
+
+        <div class='container-fluid p-3'>
+            <div class="row">
+                <div class="col-lg col-md-5 col-sm-12 order-sm-2 order-md-1">
+                    <h6 class="text-secondary">FEATURED STORIES</h6>
+                    <div class="card border-0">
+                        <div class="position-relative">
+                            <img class="card-img-top"
+                                src="https://d.newsweek.com/en/full/1621392/india-bangalore-riots-muslims-prophet-muhammad-blasphemy.jpg?w=397&amp;h=265&amp;q=90&amp;f=ecdc9e6f51175ab1067c0a0458339674"
+                                alt="india">
+                            <div class="position-absolute bottom-left px-2 py-1 corner-background text-red">
+                                <strong>WORLD</strong></div>
+                        </div>
+                        <div class="card-body px-0">
+                            <h5 class="card-title underline-red"><strong>Bangalore Riots Erupt Over Facebook Post About
+                                    Prophet Muhammad</strong></h5>
+                            <p class="card-text card-font">At least three people were killed when police fired live
+                                ammunition to break up the violent protests.</p>
+                        </div>
+                    </div>
+
+                    <div class="card border-0">
+                        <div class="position-relative">
+                            <img class="card-img-top"
+                                src="https://d.newsweek.com/en/full/1621355/anthony-fauci-coronavirus-covid19-getty.jpg?w=397&amp;h=265&amp;q=90&amp;f=c4cb7b8fd59da877b37150fc1438a9f8"
+                                alt="fauci">
+                            <div class="position-absolute bottom-left px-2 py-1 corner-background text-red">
+                                <strong>HEALTH</strong></div>
+                        </div>
+                        <div class="card-body px-0">
+                            <h5 class="card-title underline-red"><strong>Fauci Says Coronavirus Won't Go 'Spontaneously'
+                                    on Its Own</strong></h5>
+                            <p class="card-text card-font">Top immunologist Dr. Anthony Fauci said the virus could be
+                                brought under control if certain steps are followed.</p>
+                        </div>
+                    </div>
+
+                    <div class="card border-0">
+                        <div class="position-relative">
+                            <img class="card-img-top"
+                                src="https://d.newsweek.com/en/full/1621372/donald-trump-august-11-2020.jpg?w=397&amp;h=265&amp;q=90&amp;f=833afdd3afbf167b04f8684291e93641"
+                                alt="Donald Trump on Aug 11">
+                            <div class="position-absolute bottom-left px-2 py-1 corner-background text-red">
+                                <strong>U.S.</strong></div>
+                        </div>
+                        <div class="card-body px-0">
+                            <h5 class="card-title underline-red"><strong>Donald Trump Claims China, Russia Will Grab
+                                    'Plenty' of Mail-In Ballots</strong></h5>
+                            <p class="card-text card-font">The president issued his unsubstantiated claim as research
+                                showed all forms of voter fraud were extremely rare.</p>
+                        </div>
+                    </div>
+
+                    <div class="card border-0">
+                        <div class="position-relative">
+                            <img class="card-img-top"
+                                src="https://d.newsweek.com/en/full/1621369/ilhan-omar.jpg?w=397&amp;h=265&amp;q=90&amp;f=9176bebc9d0a81a4051ff241d42218b3"
+                                alt="ilhan omar">
+                            <div class="position-absolute bottom-left px-2 py-1 corner-background text-red">
+                                <strong>U.S.</strong></div>
+                        </div>
+                        <div class="card-body px-0">
+                            <h5 class="card-title underline-red"><strong>Ilhan Omar's Primary Win Set to Preserve 'The
+                                    Squad' for Two More Years</strong></h5>
+                            <p class="card-text card-font">Ilhan Omar, Alexandria Ocasio-Cortez and Rashida Tlaib have
+                                all won their primary battles, while Ayanna Pressley is running unopposed in her own.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="card border-0">
+                        <div class="position-relative">
+                            <img class="card-img-top"
+                                src="https://d.newsweek.com/en/full/1620549/looting-chicago.jpg?w=397&amp;h=265&amp;q=90&amp;f=a1bc033ff085ab6704abd58c92678905"
+                                alt="looting in Chicago">
+                            <div class="position-absolute bottom-left px-2 py-1 corner-background text-red">
+                                <strong>U.S.</strong></div>
+                        </div>
+                        <div class="card-body px-0">
+                            <h5 class="card-title underline-red"><strong>Chicago Mayor Staunchly Opposed to Bringing in
+                                    Federal Troops Amid Looting</strong></h5>
+                            <p class="card-text card-font">Mayor Lori Lightfoot called upon the state's attorney to "put
+                                your best people on this" after a night of looting and violence.</p>
+
+                        </div>
+                    </div>
+
+                    <div class="card">
+                        <div class="position-relative">
+                            <img class="card-img-top"
+                                src="https://d.newsweek.com/en/full/1614497/kent-state-university.jpg?w=500&amp;h=333&amp;l=0&amp;t=0&amp;f=3f100dde6e02cf15ec688b100fa3f46a"
+                                alt="computer science degree">
+                            <div class="position-absolute bottom-left px-2 py-1 corner-background text-blue">
+                                <strong>SPONSORED INSIGHTS</strong></div>
+                        </div>
+                        <div class="card-body">
+                            <h5 class="card-title underline-red"><strong>What Could a Career in Engineering or Computer
+                                    Science Do For You? </strong></h5>
+                            <p class="card-text card-font">Could this be the perfect time for you to pursue a career in
+                                engineering or computer science? Find out how to get started.</p>
+                        </div>
+                    </div>
+
+                    <div class="card">
+                        <div class="position-relative">
+                            <img class="card-img-top"
+                                src="https://d.newsweek.com/en/full/1617158/brandspark.png?w=500&amp;h=333&amp;f=50fc6ab9843ed86120b0dce671726563"
+                                alt="survey">
+                            <div class="position-absolute bottom-left px-2 py-1 corner-background text-blue">
+                                <strong>TAKE THE SURVEY</strong></div>
+                        </div>
+                        <div class="card-body">
+                            <h5 class="card-title underline-red"><strong>What Brands do You Trust the Most?</strong>
+                            </h5>
+                            <p class="card-text card-font">Tell us for a chance to win. 2020 Brandspark Most Trusted
+                                Awards. Voted by consumers like you.</p>
+                        </div>
+                    </div>
+
+                    <div class="card">
+                        <div class="position-relative">
+                            <img class="card-img-top"
+                                src="https://d.newsweek.com/en/full/1610683/best-maternity-hospitals-2020.png?w=500&amp;h=333&amp;f=a9a0892bbb71203135a73f0b4693f181"
+                                alt="best maternity">
+                            <div class="position-absolute bottom-left px-2 py-1 corner-background text-blue">
+                                <strong>RANKINGS</strong></div>
+                        </div>
+                        <div class="card-body">
+                            <h5 class="card-title underline-red"><strong>Best Maternity Hospitals 2020</strong></h5>
+                            <p class="card-text card-font">The facilities cited by Newsweek are an elite group
+                                demonstrating excellence in maternity care. Check the full list here</p>
+                        </div>
+                    </div>
+
+                    <div class="card">
+                        <div class="position-relative">
+                            <img class="card-img-top"
+                                src="https://d.newsweek.com/en/full/1603109/americas-best-realtors-2020.jpg?w=500&amp;h=333&amp;f=d564ac26330b80cd33b2b013a3e6fc8b"
+                                alt="best realtors">
+                            <div class="position-absolute bottom-left px-2 py-1 corner-background text-blue">
+                                <strong>RANKINGS</strong></div>
+                        </div>
+                        <div class="card-body">
+                            <h5 class="card-title underline-red"><strong>America’s Best Realtors 2020</strong></h5>
+                            <p class="card-text card-font">Newsweek partnered with REAL Trends to sort through the data
+                                and provide you with a list of America's Best Real Estate Professionals</p>
+                        </div>
+                    </div>
+
+                    <div class="card">
+                        <div class="position-relative">
+                            <img class="card-img-top"
+                                src="https://d.newsweek.com/en/full/1568509/newsweek-amplify.png?w=500&amp;h=333&amp;f=98c0ebfc554597997a0de3bd6159812a"
+                                alt="newsweek">
+
+                        </div>
+                        <div class="card-body">
+                            <h5 class="card-title underline-red"><strong>Newsweek AMPLIFY Launches Strategic Partnership
+                                    Solutions for Brands</strong>
+                            </h5>
+                            <p class="card-text card-font">Newsweek AMPLIFY, the company's performance marketing
+                                business unit, has launched a new program to empower digital brands with comprehensive
+                                content marketing and advertising strategies.</p>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-5 col-md-7 col-sm-12 order-sm-1 order-md-2">
+                        <h6 class="text-secondary">TOP STORY</h6>
+                        <div class="card border-0">
+                            <div class="position-relative">
+                                <img class="card-img-top"
+                                    src="https://d.newsweek.com/en/full/1608252/trump-supreme-court.jpg?w=591&amp;h=364&amp;f=a60e513308de6e93f587a94f75d259f5"
+                                    alt="Trump Supreme Court">
+                                <div class="position-absolute bottom-left px-2 py-1 corner-background text-red">
+                                    <strong>U.S.</strong></div>
+                            </div>
+                            <div class="card-body px-0">
+                                <h5 class="card-title underline-red"><strong>When ranked by legislative behavior and how
+                                        similar their bills and resolutions are to other congress members, Harris and
+                                        Sanders are closer than people might think.</p>
+                            </div>
+                        </div>
+
+
+
+                        <h6 class="text-secondary">MY TURN</h6>
+                        <div class="container-fluid px-0">
+                            <div class="card-deck d-sm-block d-md-flex">
+                                <div class="card border-0">
+                                    <div class="position-relative">
+                                        <img class="card-img-top"
+                                            src="https://d.newsweek.com/en/full/1621435/marriage-divorce-relationships-therapy.jpg?w=397&amp;h=397&amp;f=8f87cf38c62824c685ebee9264cee9cb"
+                                            alt="marriage, divorce">
+                                    </div>
+                                    <div class="card-body px-0">
+                                        <h5 class="card-title text-muted small-title"><strong>''I Work With Couples
+                                                About to Divorce, Here Are Their Top 5 Problems'</strong></h5>
+                                    </div>
+                                </div>
+
+                                <div class="card border-0">
+                                    <div class="position-relative">
+                                        <img class="card-img-top"
+                                            src="https://d.newsweek.com/en/full/1620433/llama-black-lives-matter-protests-portland.jpg?w=397&amp;h=397&amp;f=805d426f9d2cfa182b49ebf501969c82"
+                                            alt="black lives matter">
+                                    </div>
+                                    <div class="card-body px-0">
+                                        <h5 class="card-title text-muted small-title"><strong>'I'm Bringing a Therapy
+                                                Llama to the Portland Protests'</strong></h5>
+                                    </div>
+                                </div>
+
+                                <div class="card border-0">
+                                    <div class="position-relative">
+                                        <img class="card-img-top"
+                                            src="https://d.newsweek.com/en/full/1620433/llama-black-lives-matter-protests-portland.jpg?w=397&amp;h=397&amp;f=805d426f9d2cfa182b49ebf501969c82"
+                                            alt="black lives matter">
+                                    </div>
+                                    <div class="card-body px-0">
+                                        <h5 class="card-title text-muted small-title"><strong>'Six Years On From Mike
+                                                Brown's Death, I Have Not Seen The Change We Need'</strong></h5>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <h6 class="text-secondary">CULTURE & TRAVEL</h6>
+                        <div class="container-fluid px-0">
+                            <div class="card-deck d-sm-block d-md-flex">
+                                <div class="card border-0">
+                                    <div class="position-relative">
+                                        <img class="card-img-top"
+                                            src="https://d.newsweek.com/en/full/1621435/marriage-divorce-relationships-therapy.jpg?w=397&amp;h=397&amp;f=8f87cf38c62824c685ebee9264cee9cb"
+                                            alt="marriage, divorce">
+                                        <div class="position-absolute bottom-left p-1 corner-background small-bottom">
+                                            <strong>MOVIES</strong></div>
+                                    </div>
+                                    <div class="card-body px-0">
+                                        <h5 class="card-title text-muted small-title"><strong>Outdoor Movies Around the
+                                                World with Cinematic Views</strong></h5>
+                                    </div>
+                                </div>
+
+                                <div class="card border-0">
+                                    <div class="position-relative">
+                                        <img class="card-img-top"
+                                            src="https://d.newsweek.com/en/full/1620433/llama-black-lives-matter-protests-portland.jpg?w=397&amp;h=397&amp;f=805d426f9d2cfa182b49ebf501969c82"
+                                            alt="black lives matter">
+                                        <div class="position-absolute bottom-left p-1 corner-background small-bottom">
+                                            <strong>ROAD TRIP</strong></div>
+                                    </div>
+                                    <div class="card-body px-0">
+                                        <h5 class="card-title text-muted small-title"><strong>RVs Continue to Surge in
+                                                Popularity Amidst Pandemic</strong></h5>
+                                    </div>
+                                </div>
+
+                                <div class="card border-0">
+                                    <div class="position-relative">
+                                        <img class="card-img-top"
+                                            src="https://d.newsweek.com/en/full/1620433/llama-black-lives-matter-protests-portland.jpg?w=397&amp;h=397&amp;f=805d426f9d2cfa182b49ebf501969c82"
+                                            alt="black lives matter">
+                                        <div class="position-absolute bottom-left p-1 corner-background small-bottom">
+                                            <strong>SHARKS</strong></div>
+                                    </div>
+                                    <div class="card-body px-0">
+                                        <h5 class="card-title text-muted small-title"><strong>Ready for Shark Week? The
+                                                Most Surprising Facts About Sharks </strong></h5>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <h6 class="text-secondary">MORE STORIES</h6>
+
+                    <div class="card border-bottom-0 border-right-0 border-left-0 position-relative">
+                        <div class="card-body px-0 d-inline">
+                            <img class="float-left pr-3 pb-2"
+                                src="https://d.newsweek.com/en/full/1621363/chicago.jpg?w=95&amp;h=95&amp;f=d9af9159c9cddbe7dd06020a448cdbed"
+                                alt="Chicago">
+                            <h5 class="card-title underline-red d-inline card-font"><strong>Black Lives Matter Chicago
+                                    Organizer Defends Looting: 'That's Reparations'</strong></h5>
+                            <p class="card-text card-font">"I don't care if somebody decides to loot a Gucci or a Macy's
+                                or a Nike because that makes sure that that person eats," Black Lives Matter Chicago
+                                organizer Ariel Atkins said.</p>
+                        </div>
+                    </div>
+
+                    <div class="card border-bottom-0 border-right-0 border-left-0 position-relative">
+                        <div class="card-body px-0 d-inline">
+                            <img class="float-left pr-3 pb-2"
+                                src="https://d.newsweek.com/en/full/1621363/chicago.jpg?w=95&amp;h=95&amp;f=d9af9159c9cddbe7dd06020a448cdbed"
+                                alt="Chicago">
+                            <h5 class="card-title underline-red d-inline card-font"><strong>Soros Says Trump Is a Conman
+                                    Who Will Do 'Anything' to Stay in Power</strong></h5>
+                            <p class="card-text card-font">George Soros—long a bogeyman for the global right-wing—said
+                                the president is dangerous because he wants to avoid accountability.</p>
+                        </div>
+                    </div>
+
+                    <div class="card border-bottom-0 border-right-0 border-left-0 position-relative">
+                        <div class="card-body px-0 d-inline">
+                            <img class="float-left pr-3 pb-2"
+                                src="https://d.newsweek.com/en/full/1621363/chicago.jpg?w=95&amp;h=95&amp;f=d9af9159c9cddbe7dd06020a448cdbed"
+                                alt="akbar rogers freeport police">
+                            <h5 class="card-title underline-red d-inline card-font"><strong>New Zealand's Fauci Says
+                                    Coronavirus Comeback a 'Shock' </strong></h5>
+                            <p class="card-text card-font">Additional new cases are likely to emerge in the coming days,
+                                New Zealand's Director General of Health Ashley Bloomfield said.</p>
+                        </div>
+                    </div>
+
+                    <div class="card border-bottom-0 border-right-0 border-left-0 position-relative">
+                        <div class="card-body px-0 d-inline">
+                            <img class="float-left pr-3 pb-2"
+                                src="https://d.newsweek.com/en/full/1621363/chicago.jpg?w=95&amp;h=95&amp;f=d9af9159c9cddbe7dd06020a448cdbed"
+                                alt="Senate Majority Leader Mitch McConnell">
+                            <h5 class="card-title underline-red d-inline card-font"><strong>Taiwan Has Had 7 Coronavirus
+                                    Deaths. Here's How </strong></h5>
+                            <p class="card-text card-font">Professor Kerry Brown, of King's College London told Newsweek
+                                it is hard to see how Taiwan could have done better. "They must be the global model of
+                                how to combat this issue."</p>
+                        </div>
+                    </div>
+
+                    <div class="card border-bottom-0 border-right-0 border-left-0 position-relative">
+                        <div class="card-body px-0 d-inline">
+                            <img class="float-left pr-3 pb-2"
+                                src="https://d.newsweek.com/en/full/1621363/chicago.jpg?w=95&amp;h=95&amp;f=d9af9159c9cddbe7dd06020a448cdbed"
+                                alt="Marijuana">
+                            <h5 class="card-title underline-red d-inline card-font"><strong>Beirut—Safe Haven for
+                                    World's NGOs—Now Front Line for Aid Workers</strong></h5>
+                            <p class="card-text card-font">Last week's explosion devastated the city and pushed
+                                Lebanon—already grappling with multiple crises—into deeper turmoil.</p>
+                        </div>
+                    </div>
+
+                    <div class="card border-bottom-0 border-right-0 border-left-0 position-relative">
+                        <div class="card-body px-0 d-inline">
+                            <img class="float-left pr-3 pb-2"
+                                src="https://d.newsweek.com/en/full/1621363/chicago.jpg?w=95&amp;h=95&amp;f=d9af9159c9cddbe7dd06020a448cdbed"
+                                alt="Dr. Anthony Fauci">
+                            <h5 class="card-title underline-red d-inline card-font"><strong>First Seeds, Now Mystery
+                                    Face Masks Arriving From China to U.S. Mailboxes</strong></h5>
+                            <p class="card-text card-font">Unsolicited face masks are being posted to U.S. residents
+                                from abroad, leaving homeowners nervous and perplexed as to why they are being delivered
+                                these packages.</p>
+                        </div>
+                    </div>
+
+                    <div class="card border-bottom-0 border-right-0 border-left-0 position-relative">
+                        <div class="card-body px-0 d-inline">
+                            <img class="float-left pr-3 pb-2"
+                                src="https://d.newsweek.com/en/full/1621363/chicago.jpg?w=95&amp;h=95&amp;f=d9af9159c9cddbe7dd06020a448cdbed"
+                                alt="Seoul Mayor Park Won-soon November 2011">
+                            <h5 class="card-title underline-red d-inline card-font"><strong>QAnon Adherent Marjorie
+                                    Greene Wins Georgia Primary in Heavily GOP District</strong></h5>
+                            <p class="card-text card-font">QAnon believer Marjorie Greene is likely to win a seat in
+                                Congress after defeating neurosurgeon John Cowan in the GOP primary runoff election for
+                                a heavily Republican Georgia district.</p>
+                        </div>
+                    </div>
+
+                    <div class="card border-bottom-0 border-right-0 border-left-0 position-relative">
+                        <div class="card-body px-0 d-inline">
+                            <img class="float-left pr-3 pb-2"
+                                src="https://d.newsweek.com/en/full/1621363/chicago.jpg?w=95&amp;h=95&amp;f=d9af9159c9cddbe7dd06020a448cdbed"
+                                alt="Naya Rivera">
+                            <h5 class="card-title underline-red d-inline card-font"><strong>Shaun King Explains Why He
+                                    Changed His Mind About Kamala Harris</strong></h5>
+                            <p class="card-text card-font">The human rights activist has done a U-turn on Biden's choice
+                                for vice president.</p>
+                        </div>
+                    </div>
+
+                    <div class="card border-bottom-0 border-right-0 border-left-0 position-relative">
+                        <div class="card-body px-0 d-inline">
+                            <img class="float-left pr-3 pb-2"
+                                src="https://d.newsweek.com/en/full/1621363/chicago.jpg?w=95&amp;h=95&amp;f=d9af9159c9cddbe7dd06020a448cdbed"
+                                alt="George Floyd Mural">
+                            <h5 class="card-title underline-red d-inline card-font"><strong>Sweden's Coronavirus Herd
+                                    Immunity 'Nowhere in Sight,' Researchers Say</strong></h5>
+                            <p class="card-text card-font">The percentage of people in Stockholm who had antibodies
+                                against the coronavirus was thought to be around 15 percent in May.</p>
+                        </div>
+                    </div>
+
+                    <div class="card border-bottom-0 border-right-0 border-left-0 position-relative">
+                        <div class="card-body px-0 d-inline">
+                            <img class="float-left pr-3 pb-2"
+                                src="https://d.newsweek.com/en/full/1621363/chicago.jpg?w=95&amp;h=95&amp;f=d9af9159c9cddbe7dd06020a448cdbed"
+                                alt="Wang Yi, US, CHina, conflict, confrontation, competition">
+                            <h5 class="card-title underline-red d-inline card-font"><strong>Can the U.K. Economy Avoid a
+                                    Second Great Depression?</strong></h5>
+                            <p class="card-text card-font">The number of pictures being painted, letters of the alphabet
+                                being re-defined and elephants in every room, you could be forgiven for thinking
+                                Westminster was pre-school.</p>
+                        </div>
+                    </div>
+
+                    <div class="card border-bottom-0 border-right-0 border-left-0 position-relative">
+                        <div class="card-body px-0 d-inline">
+                            <img class="float-left pr-3 pb-2"
+                                src="https://d.newsweek.com/en/full/1621363/chicago.jpg?w=95&amp;h=95&amp;f=d9af9159c9cddbe7dd06020a448cdbed"
+                                alt="Coronavirus testing">
+                            <h5 class="card-title underline-red d-inline card-font"><strong>TTwo Killed at Sturgis
+                                    Motorcycle Rally, Crash Numbers Higher Than Last Year</strong></h5>
+                            <p class="card-text card-font">The event attended by more than 200,000 people during the
+                                pandemic sees first fatalities after three riders collide on a highway.</p>
+                        </div>
+                    </div>
+
+                    <div class="card border-bottom-0 border-right-0 border-left-0 position-relative">
+                        <div class="card-body px-0 d-inline">
+                            <img class="float-left pr-3 pb-2"
+                                src="https://d.newsweek.com/en/full/1621363/chicago.jpg?w=95&amp;h=95&amp;f=d9af9159c9cddbe7dd06020a448cdbed"
+                                alt="Coronavirus testing">
+                            <h5 class="card-title underline-red d-inline card-font"><strong>San Andreas Swarm Could Put
+                                    California at Risk For Over a Week</strong></h5>
+                            <p class="card-text card-font">The swarm hit a section of the fault capable of producing
+                                earthquakes of magnitude 7 and above.</p>
+                        </div>
+                    </div>
+
+
+                </div>
+
+                <div class="col order-sm-3 order-md-3">
+                    <h6 class="text-secondary">THE DEBATE</h6>
+                    <div class="container-fluid px-0 border-top border-bottom position-relative">
+                        <div class="card border-right-0 border-left-0 position-relative">
+                            <div class="card-body px-0 py-3 d-inline">
+                                <img class="float-left pr-3 pb-2 circle-picture"
+                                    src="https://d.newsweek.com/en/full/1607603/patrick-j-deneen.png?w=150&amp;h=150&amp;f=d65d2859e4322b17d1e005f38ef1865c"
+                                    alt="Patrick J. Deneen">
+                                <h5 class="card-title underline-red d-inline card-font"><strong>Liberalism Has
+                                        Failed</strong></h5>
+                                <p class="card-text card-font">BY <strong>Patrick J. Deneen</strong></p>
+                            </div>
+                        </div>
+                        <div class="position-absolute text-white bg-dark vs-position p-1">VS</div>
+                        <div class="card border-right-0 border-left-0 position-relative">
+                            <div class="card-body px-0 py-3 d-inline">
+                                <img class="float-right pr-3 pb-2 circle-picture"
+                                    src="https://d.newsweek.com/en/full/1607580/jonah-goldberg.png?w=150&amp;h=150&amp;f=c02e05152c8bd0781dabafaa89ff6967"
+                                    alt="Jonah Goldberg">
+                                <h5 class="card-title underline-red d-inline card-font"><strong>Liberalism Has Not
+                                        Failed</strong></h5>
+                                <p class="card-text card-font">BY <strong>Jonah Goldberg</strong></p>
+                            </div>
+                        </div>
+                    </div>
+                    <h6 class="text-secondary pt-3">OPINION</h6>
+                    <div class="card border-right-0 border-left-0 border-top-0 position-relative">
+                        <div class="card-body px-0 py-2 d-inline">
+                            <img class="float-left pr-3 pb-2 circle-picture"
+                                src="https://d.newsweek.com/en/full/1608012/joshua-c-wilson-amanda-hollis-brusky.png?w=63&amp;h=63&amp;f=6c25a670ebbf61842ef0c18cefc0eb59"
+                                alt="Joshua C. Wilson and Amanda Hollis-Brusky">
+                            <h5 class="card-title underline-red d-inline card-font"><strong>The Supreme Court's Culture
+                                    War Whiplash Is All in Your Head</strong></h5>
+                            <p class="card-text card-font">By
+                                Joshua C. Wilson and Amanda Hollis-Brusky</p>
+                        </div>
+                    </div>
+
+                    <div class="card border-right-0 border-left-0 border-top-0 position-relative">
+                        <div class="card-body px-0 py-2 d-inline">
+                            <img class="float-left pr-3 pb-2 circle-picture"
+                                src="https://d.newsweek.com/en/full/1563625/nigel-farage.png?w=63&amp;h=63&amp;f=241bf306fe74b397c2ecf4116cc79b62"
+                                alt="nigel-farage">
+                            <h5 class="card-title underline-red d-inline card-font"><strong>The West Must Decouple From
+                                    Communist China</strong></h5>
+                            <p class="card-text card-font">By
+                                Nigel Farage</p>
+                        </div>
+                    </div>
+
+                    <div class="card border-right-0 border-left-0 border-top-0 position-relative">
+                        <div class="card-body px-0 py-2 d-inline">
+                            <img class="float-left pr-3 pb-3 circle-picture"
+                                src="https://d.newsweek.com/en/full/1608136/mar-sher.png?w=63&amp;h=63&amp;f=2bf3ea8bc5ece7b418c5a7f64a186768"
+                                alt="mar-sher">
+                            <h5 class="card-title underline-red d-inline card-font"><strong>The Villages May Be Trump's
+                                    Bastion Among Retirees—But We Are the Resistance</strong></h5>
+                            <p class="card-text card-font">By
+                                Marsha Shearer</p>
+                        </div>
+                    </div>
+
+                    <div class="card border-right-0 border-left-0 border-top-0 position-relative">
+                        <div class="card-body px-0 py-2 d-inline">
+                            <img class="float-left pr-3 pb-2 circle-picture"
+                                src="https://d.newsweek.com/en/full/1606998/marjan-greenblatt.png?w=63&amp;h=63&amp;f=d1ef306c1fc9fa4f7acc83364a39ca76"
+                                alt="Marjan Greenblatt">
+                            <h5 class="card-title underline-red d-inline card-font"><strong>The Horror of Femicide in
+                                    Iran</strong></h5>
+                            <p class="card-text card-font">By
+                                Marjan Greenblatt</p>
+                        </div>
+                    </div>
+
+                    <div class="card border-right-0 border-left-0 border-top-0 position-relative">
+                        <div class="card-body px-0 py-2 d-inline">
+                            <img class="float-left pr-3 pb-2 circle-picture"
+                                src="https://d.newsweek.com/en/full/1608190/laurence-benenson-jonathan-haggerty.png?w=63&amp;h=63&amp;f=2b8f9576a4cd6bb0a4b2019331633a12"
+                                alt="Laurence Benenson and Jonathan Haggerty">
+                            <h5 class="card-title underline-red d-inline card-font"><strong>With Family Detention
+                                    Centers 'On Fire,' Separations Are Not the Answer</strong></h5>
+                            <p class="card-text card-font">By
+                                Laurence Benenson and Jonathan Haggerty</p>
+                        </div>
+                    </div>
+
+                    <div class="card border-0 position-relative">
+                        <div class="card-body px-0 py-2 d-inline">
+                            <img class="float-left pr-3 pb-2 circle-picture"
+                                src="https://d.newsweek.com/en/full/1607328/kevin-roberts.png?w=63&amp;h=63&amp;f=bc14d8126bfce13a64db3f00900491a1"
+                                alt="Kevin Roberts">
+                            <h5 class="card-title underline-red d-inline card-font"><strong>National Garden of American
+                                    Heroes</strong></h5>
+                            <p class="card-text card-font">By
+                                Kevin Roberts</p>
+                        </div>
+                    </div>
+
+                    <div class="card">
+                        <div class="position-relative">
+                            <img class="card-img-top"
+                                src="https://d.newsweek.com/en/full/1593435/springboard.png?w=500&h=333&f=8836e51b8846b0a2e2959fe9fe5694f1"
+                                alt="Newsweek">
+                            <div class="position-absolute bottom-left px-2 py-1 corner-background text-blue">
+                                <strong>SPONSORED INSIGHT</strong></div>
+                        </div>
+                        <div class="card-body">
+                            <h5 class="card-title underline-red"><strong>Want to Learn to Code Online?</strong></h5>
+                            <p class="card-text card-font">If you are thinking about changing career or you have
+                                recently lost your job, this might be the time to think about a
+                                career in coding.</p>
+                        </div>
+                    </div>
+
+
+                    <div class="card bg-sign-up position-relative my-3 mx-3">
+                        <div class="card-body px-3 py-2 d-inline">
+                            <img class="float-left p-0 mr-2 my-lg-2 my-sm-0 article-logo bg-danger"
+                                src="https://g.newsweek.com/www/images/logo-n1.svg" alt="logo">
+                            <h5 class="card-title d-inline card-font font-sign "><strong>START YOUR DAY WITH OUR TOP 5
+                                    ARTICLES</strong></h5>
+                            <form>
+                                <input type="email" class="form-control my-2" aria-describedby="emailHelp"
+                                    placeholder="Email address">
+                                <button type="submit" class="btn btn-sign text-white">FREE SIGN UP <i
+                                        class="fas fa-chevron-right"></i></button>
+                            </form>
+                        </div>
+                    </div>
+
+
+                    <div class="card border-0 my-3">
+                        <div class="position-relative">
+                            <img class="card-img-top"
+                                src="https://d.newsweek.com/en/full/1606968/best-nursing-homes-2020.png?w=500&h=333&f=c4c9af7aa9b2229347ab028f6dbddafa"
+                                alt="Newsweek">
+                        </div>
+                        <div class="card-body border">
+                            <h5 class="card-title underline-red"><strong>Best Nursing Homes 2021</strong></h5>
+                            <p class="card-text card-font">Newsweek is partnering with the respected global data
+                                research firm Statista Inc. to establish a ranking of Best Nursing
+                                Homes 2021. If you work in this field, please participate in our survey.</p>
+                        </div>
+                    </div>
+
+                    <div class="card">
+                        <div class="position-relative">
+                            <img class="card-img-top"
+                                src="https://d.newsweek.com/en/full/1587568/infection-prevention-products-banner.jpg?w=500&h=333&f=c96d696a017681c45d2f464a2ae0e23d"
+                                alt="Newsweek">
+                            <div class="position-absolute bottom-left px-2 py-1 corner-background text-blue">
+                                <strong>RANKINGS</strong></div>
+                        </div>
+                        <div class="card-body">
+                            <h5 class="card-title underline-red"><strong>Best Infection Prevention Products</strong>
+                            </h5>
+                            <p class="card-text card-font">During the coronavirus outbreak, health care is more
+                                important than ever. In Newsweek's first Best Health Care series,
+                                we highlight the best infection prevention products.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+        </div>
+
+</body>
+
+</html>
