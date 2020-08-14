@@ -12,54 +12,55 @@
     box-sizing: inherit;
   } 
 
-/* 
-html {
-    font-size: 16px;
-  }
-   */
- 
-  
-
   /*------------Header---------*/
-
 
 .red {
     background-color: red;
 }
+
 .main {
     max-width: 1300px;
     padding: 0;
     background-color: white;
 }
+
 .weather-icon {
     height: 24px;
     width: 24px;
 }
+
 .svg {
     width: 396px;
     height: 60px;
     fill: white;
 }
+
 .weather-date {
     font-size: 14px;
 }
+
 .btn-subscribe {
     border-radius: 100px;
     background-color: #ffe400;
 }
+
 .btn-primary:hover {
     text-decoration: none;
     background-color: #ffe400;
 }
+
 .true-center {
     width: 240px;
 }
+
 .nav-link {
     color: black;
 }
+
 .nav-link:hover, .trending-item:hover{
     color: red;
 }
+
 .nav-container {
     width: 95%;
     margin-top: -13px;
@@ -71,6 +72,7 @@ html {
 .form-width {
     width: 20px;
 }
+
 .upper-tri {
     border-left: 13px solid transparent;
     border-right: 13px solid red;
@@ -87,6 +89,7 @@ html {
     font-size: 28px;
     color: rgba(255, 255, 255, .55);
 }
+
 .fa-user {
     color: rgba(255, 255, 255, .55);
 }
@@ -94,29 +97,37 @@ html {
 .card-font {
     font-size: 14px;
 }
+
 .underline-red:hover {
     text-decoration: underline;
     text-decoration-color: red;
 }
+
 .bottom-left {
     bottom: 0;
     left: 0;
 }
+
 .corner-background {
     background-color: rgba(255, 255, 255, .9)
 }
+
 .text-red {
     color: red;
 }
+
 .turn-red:hover {
     color: red;
 }
+
 .text-blue {
     color: #3581f4;
 }
+
 .small-title {
     font-size: 13px;
 }
+
 .small-bottom {
     font-size: 11px;
     background-color: #c2d4d7;
@@ -125,6 +136,7 @@ html {
 .circle-picture {
     width: 79px;
 }
+
 .vs-position {
     left: 50%;
     margin-left: -12px;
@@ -137,87 +149,94 @@ html {
 .article-logo {
     width: 28px;
 }
+
 .bg-sign-up, .bg-sign-features {
     background-color: rgba(104, 104, 104, 0.15);
 }
+
 .bg-sign-features:hover {
     background-color: rgba(104, 104, 104, 0.4);
 }
+
 .font-sign {
     font-size: 16px;
 }
+
 .btn-sign {
     width: 70%;
     background-color: red;
 }
+
 .bg-issue {
     background-color: rgba(255, 255, 255, 0.9);
 }
+
 .font-bigger {
     font-size: 20px;
 }
+
 .limit-w {
     width: 111px;
 }
+
 .bg-sub {
     background: url(https://d.newsweek.com/en/full/1541302/starting5-homepage.png?w=397&amp;h=265&amp;q=90&amp;f=742bce9a6f72dd8f19ba2e7fd5db06e5&quot;) center center / cover no-repeat;
     width: 100%!important;
     max-width: 191px;
     z-index: 10;
 }
+
 .sub-img-l {
     left: 0;
 }
+
 .sub-img-r {
     left: 50px;
     top: 10px;
     z-index: 2;
 }
+
 .m-height {
     height: 250px;
 }
+
 .text-black {
     color: black;
 }
+
 .footer-i {
     height: 36px;
     fill: #f72210;
 }
+
 .small-font {
     font-size: 12px;
 }
+
 .footer-icon {
     font-size: 24px;
 }
 .footer-icon:hover {
     color: blue;
 }
+
 .bla:hover {
     color:black !important;
 }
+
 @media only screen and (max-width: 991px) { 
     .svg {
             height: 20px;
             width: 132px;
     }
 }
+
 @media only screen and (max-width: 767px) {
     .fa-bars {
         font-size: 18px;
     }
+
     .btn-subscribe {
         font-size: 12px;
     }
-
 }
-
-   
-
-<img data-src="
-https://d.newsweek.com/en/full/1611327/cover-july-31-august-07-2020.jpg?w=170&amp;q=95&amp;f=e9849b39e78f364f0f8bb410954aa063
-" class="lazyloaded" src="https://d.newsweek.com/en/full/1611327/cover-july-31-august-07-2020.jpg?w=170&amp;q=95&amp;f=e9849b39e78f364f0f8bb410954aa063">
-
-
-<img data-src=
-"https://d.newsweek.com/en/full/1618294/cover-august-14-2020.jpg?w=170&amp;q=95&amp;f=f52aeae07248b670928a3f583a3ebda9"
- class="lazyloaded" src="https://d.newsweek.com/en/full/1618294/cover-august-14-2020.jpg?w=170&amp;q=95&amp;f=f52aeae07248b670928a3f583a3ebda9">
