@@ -122,6 +122,108 @@ html {
     background-color: #c2d4d7;
 }
 
+.circle-picture {
+    width: 79px;
+}
+.vs-position {
+    left: 50%;
+    margin-left: -12px;
+    top: 50%;
+    margin-top: -25px;
+    border-radius: 50%;
+    z-index: 3;
+}
+
+.article-logo {
+    width: 28px;
+}
+.bg-sign-up, .bg-sign-features {
+    background-color: rgba(104, 104, 104, 0.15);
+}
+.bg-sign-features:hover {
+    background-color: rgba(104, 104, 104, 0.4);
+}
+.font-sign {
+    font-size: 16px;
+}
+.btn-sign {
+    width: 100%;
+    background-color: red;
+}
+.bg-issue {
+    background-color: rgba(255, 255, 255, 0.9);
+}
+.font-bigger {
+    font-size: 20px;
+}
+.limit-w {
+    width: 111px;
+}
+.bg-sub {
+    background: url(https://d.newsweek.com/en/full/1541302/starting5-homepage.png?w=397&amp;h=265&amp;q=90&amp;f=742bce9a6f72dd8f19ba2e7fd5db06e5&quot;) center center / cover no-repeat;
+    width: 100%!important;
+    max-width: 191px;
+    z-index: 10;
+}
+.sub-img-l {
+    left: 0;
+}
+.sub-img-r {
+    left: 50px;
+    top: 10px;
+    z-index: 2;
+}
+.m-height {
+    height: 250px;
+}
+.text-black {
+    color: black;
+}
+.footer-i {
+    height: 36px;
+    fill: #f72210;
+}
+.small-font {
+    font-size: 12px;
+}
+.footer-icon {
+    font-size: 24px;
+}
+.footer-icon:hover {
+    color: blue;
+}
+.bla:hover {
+    color:black !important;
+}
+@media only screen and (max-width: 991px) { 
+    .svg {
+            height: 20px;
+            width: 132px;
+    }
+}
+@media only screen and (max-width: 767px) {
+    .fa-bars {
+        font-size: 18px;
+    }
+    .btn-subscribe {
+        font-size: 12px;
+    }
+
+}
+
+   
+
+
+
+
 <img data-src="https://d.newsweek.com/en/full/1621435/marriage-divorce-relationships-therapy.jpg?w=397&amp;h=397&amp;f=8f87cf38c62824c685ebee9264cee9cb" alt="marriage, divorce, relationships, therapy " title="marriage, divorce, relationships, therapy " class="mapping-mobile lazysize lazyloaded" style="position: absolute;" src="https://d.newsweek.com/en/full/1621435/marriage-divorce-relationships-therapy.jpg?w=397&amp;h=397&amp;f=8f87cf38c62824c685ebee9264cee9cb" width="397" height="397">
 
 <img data-src="https://d.newsweek.com/en/full/1620433/llama-black-lives-matter-protests-portland.jpg?w=397&amp;h=397&amp;f=805d426f9d2cfa182b49ebf501969c82" alt="Llama, Black Lives Matter, Protests, Portland " title="Llama, Black Lives Matter, Protests, Portland " class="mapping-mobile lazysize lazyloaded" style="position: absolute;" src="https://d.newsweek.com/en/full/1620433/llama-black-lives-matter-protests-portland.jpg?w=397&amp;h=397&amp;f=805d426f9d2cfa182b49ebf501969c82" width="397" height="397">
+
+<img data-src="https://d.newsweek.com/en/full/1621363/chicago.jpg?w=95&amp;h=95&amp;f=d9af9159c9cddbe7dd06020a448cdbed" alt="Chicago " title="Chicago " class="mapping-sm_thumb lazysize lazyloaded" style="position: absolute;" src="https://d.newsweek.com/en/full/1621363/chicago.jpg?w=95&amp;h=95&amp;f=d9af9159c9cddbe7dd06020a448cdbed" width="95" height="95">
+
+<img src="https://d.newsweek.com/en/full/1621304/kamala-harris-bernie-sanders-liberal-senate-record.jpg?w=591&amp;h=364&amp;f=d6d167509e40891622c82c81890abd9a" alt="Kamala Harris Bernie Sanders liberal Senate record" title="Kamala Harris Bernie Sanders liberal Senate record" class="mapping-md" style="position: absolute;" width="591" height="364">
+
+<img data-src="https://d.newsweek.com/en/full/1589023/kelly-shackelford.png?w=150&amp;h=150&amp;f=b9f49e148e5ee0c1a57d167c4e7b0875" alt="Kelly Shackelford" title="Kelly Shackelford" class="lazyloaded" style="position: absolute;" src="https://d.newsweek.com/en/full/1589023/kelly-shackelford.png?w=150&amp;h=150&amp;f=b9f49e148e5ee0c1a57d167c4e7b0875" width="150" height="150">
+
+<img data-src="https://d.newsweek.com/en/full/1618671/melissa-rogers.png?w=150&amp;h=150&amp;f=8f0ec46c99911eb4bb031375223099b1" alt="Melissa Rogers" title="Melissa Rogers" class="lazyloaded" style="position: absolute;" src="https://d.newsweek.com/en/full/1618671/melissa-rogers.png?w=150&amp;h=150&amp;f=8f0ec46c99911eb4bb031375223099b1" width="150" height="150">
